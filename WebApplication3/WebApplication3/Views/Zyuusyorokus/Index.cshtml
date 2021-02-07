@@ -1,0 +1,87 @@
+﻿@model IEnumerable<WebApplication3.Models.Zyuusyoroku>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ZyuusyorokuId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MeisyouRyaku)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MeisyouSei)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zyuusyo1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zyuusyo2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zyuusyo3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zyuusyo4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DennwaBanngou)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FaxBanngou)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EriaId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZyuusyorokuId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MeisyouRyaku)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MeisyouSei)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zyuusyo1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zyuusyo2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zyuusyo3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zyuusyo4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DennwaBanngou)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FaxBanngou)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EriaId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
