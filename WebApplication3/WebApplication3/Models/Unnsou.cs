@@ -21,7 +21,6 @@ namespace WebApplication3.Models
         public string Zyuusyo4 { get; set; }
         public string DennwaBanngou { get; set; }
         public string FaxBanngou { get; set; }
-        public string EriaId { get; set; }
 
     }
 
@@ -34,47 +33,11 @@ namespace WebApplication3.Models
         public string UserId { get; set; }
         public int ZyuusyorokuId { get; set; }
         public int EriaId { get; set; }
-
+        public virtual Zyuusyoroku Zyuusyoroku { get; set; }
 
     }
 
     public class Haisousaki
-    {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
-        public string UserId { get; set; }
-        public int ZyuusyorokuId { get; set; }
-        public int EriaId { get; set; }
-        public virtual Zyuusyoroku MeisyouRyaku { get; set; }
-        public virtual Zyuusyoroku MeisyouSei { get; set; }
-        public virtual Zyuusyoroku Zyuusyo1 { get; set; }
-        public virtual Zyuusyoroku Zyuusyo2 { get; set; }
-        public virtual Zyuusyoroku Zyuusyo3 { get; set; }
-        public virtual Zyuusyoroku Zyuusyo4 { get; set; }
-        public virtual Zyuusyoroku DennwaBanngou { get; set; }
-        public virtual Zyuusyoroku FaxBanngou { get; set; }
-    }
-
-    public class Haisousaki2
-    {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
-        public string UserId { get; set; }
-        public int ZyuusyorokuId { get; set; }
-        public int EriaId { get; set; }
-        public virtual Zyuusyoroku MeisyouRyaku { get; set; }
-        public virtual Zyuusyoroku MeisyouSei { get; set; }
-        public virtual Zyuusyoroku Zyuusyo1 { get; set; }
-        public virtual Zyuusyoroku Zyuusyo2 { get; set; }
-        public virtual Zyuusyoroku Zyuusyo3 { get; set; }
-        public virtual Zyuusyoroku Zyuusyo4 { get; set; }
-        public virtual Zyuusyoroku DennwaBanngou { get; set; }
-        public virtual Zyuusyoroku FaxBanngou { get; set; }
-    }
-
-    public class Haisousaki3
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

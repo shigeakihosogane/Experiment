@@ -8,17 +8,17 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{33E11F60-854B-4197-B468-74B95ED06017}</ProjectGuid>
+    <ProjectGuid>{FFD455D2-4867-4B66-8111-41161882D326}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebApplication3</RootNamespace>
-    <AssemblyName>WebApplication3</AssemblyName>
+    <RootNamespace>WebApplication4</RootNamespace>
+    <AssemblyName>WebApplication4</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44356</IISExpressSSLPort>
+    <IISExpressSSLPort>44367</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -45,18 +45,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -120,6 +112,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
     </Reference>
@@ -170,46 +168,20 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\Haisousaki3Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202102050858240_Initial.cs" />
-    <Compile Include="Migrations\202102050858240_Initial.Designer.cs">
-      <DependentUpon>202102050858240_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202102080839190_Initial.cs" />
+    <Compile Include="Migrations\202102080839190_Initial.Designer.cs">
+      <DependentUpon>202102080839190_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202102070121419_Zyuusyoroku.cs" />
-    <Compile Include="Migrations\202102070121419_Zyuusyoroku.Designer.cs">
-      <DependentUpon>202102070121419_Zyuusyoroku.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102070238536_Syuukasaki.cs" />
-    <Compile Include="Migrations\202102070238536_Syuukasaki.Designer.cs">
-      <DependentUpon>202102070238536_Syuukasaki.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102070558403_Haisousaki.cs" />
-    <Compile Include="Migrations\202102070558403_Haisousaki.Designer.cs">
-      <DependentUpon>202102070558403_Haisousaki.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102070602214_Haisousaki2.cs" />
-    <Compile Include="Migrations\202102070602214_Haisousaki2.Designer.cs">
-      <DependentUpon>202102070602214_Haisousaki2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102070606017_Haisousaki22.cs" />
-    <Compile Include="Migrations\202102070606017_Haisousaki22.Designer.cs">
-      <DependentUpon>202102070606017_Haisousaki22.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102070617524_Haisousaki3.cs" />
-    <Compile Include="Migrations\202102070617524_Haisousaki3.Designer.cs">
-      <DependentUpon>202102070617524_Haisousaki3.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Controllers\SyuukasakisController.cs" />
-    <Compile Include="Models\Unnsou.cs" />
-    <Compile Include="Controllers\ZyuusyorokusController.cs" />
+    <Compile Include="Models\UnsouModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -269,21 +241,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Zyuusyorokus\Create.cshtml" />
-    <Content Include="Views\Zyuusyorokus\Delete.cshtml" />
-    <Content Include="Views\Zyuusyorokus\Details.cshtml" />
-    <Content Include="Views\Zyuusyorokus\Edit.cshtml" />
-    <Content Include="Views\Zyuusyorokus\Index.cshtml" />
-    <Content Include="Views\Syuukasakis\Create.cshtml" />
-    <Content Include="Views\Syuukasakis\Delete.cshtml" />
-    <Content Include="Views\Syuukasakis\Details.cshtml" />
-    <Content Include="Views\Syuukasakis\Edit.cshtml" />
-    <Content Include="Views\Syuukasakis\Index.cshtml" />
-    <Content Include="Views\Haisousaki3\Create.cshtml" />
-    <Content Include="Views\Haisousaki3\Delete.cshtml" />
-    <Content Include="Views\Haisousaki3\Details.cshtml" />
-    <Content Include="Views\Haisousaki3\Edit.cshtml" />
-    <Content Include="Views\Haisousaki3\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -302,30 +259,9 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202102050858240_Initial.resx">
-      <DependentUpon>202102050858240_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202102080839190_Initial.resx">
+      <DependentUpon>202102080839190_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102070121419_Zyuusyoroku.resx">
-      <DependentUpon>202102070121419_Zyuusyoroku.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102070238536_Syuukasaki.resx">
-      <DependentUpon>202102070238536_Syuukasaki.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102070558403_Haisousaki.resx">
-      <DependentUpon>202102070558403_Haisousaki.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102070602214_Haisousaki2.resx">
-      <DependentUpon>202102070602214_Haisousaki2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102070606017_Haisousaki22.resx">
-      <DependentUpon>202102070606017_Haisousaki22.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102070617524_Haisousaki3.resx">
-      <DependentUpon>202102070617524_Haisousaki3.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -343,9 +279,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>51162</DevelopmentServerPort>
+          <DevelopmentServerPort>52907</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44356/</IISUrl>
+          <IISUrl>https://localhost:44367/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

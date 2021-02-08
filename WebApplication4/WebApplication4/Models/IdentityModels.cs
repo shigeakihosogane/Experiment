@@ -3,20 +3,13 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using static WebApplication4.Models.UnsouModels;
 
-namespace WebApplication3.Models
+namespace WebApplication4.Models
 {
     // ApplicationUser クラスにさらにプロパティを追加すると、ユーザーのプロファイル データを追加できます。詳細については、https://go.microsoft.com/fwlink/?LinkID=317594 を参照してください。
     public class ApplicationUser : IdentityUser
     {
-
-        
-
-
-
-
-
-
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // authenticationType が CookieAuthenticationOptions.AuthenticationType で定義されているものと一致している必要があります
@@ -38,9 +31,19 @@ namespace WebApplication3.Models
             return new ApplicationDbContext();
         }
 
+
+
+
+
+
         public DbSet<Zyuusyoroku> Zyuusyorokus { get; set; }
-        public DbSet<Syuukasaki>Syuukasakis { get; set; }
+        public DbSet<Syuukasaki> Syuukasakis { get; set; }
         public DbSet<Haisousaki> Haisousakis { get; set; }
 
+
+
     }
+
+
+
 }
