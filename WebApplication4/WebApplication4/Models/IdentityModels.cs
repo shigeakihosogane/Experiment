@@ -7,6 +7,14 @@ using static WebApplication4.Models.UnsouModels;
 
 namespace WebApplication4.Models
 {
+
+    //for role
+    public class ApplicationRole : IdentityRole
+    {
+
+    }
+
+
     // ApplicationUser クラスにさらにプロパティを追加すると、ユーザーのプロファイル データを追加できます。詳細については、https://go.microsoft.com/fwlink/?LinkID=317594 を参照してください。
     public class ApplicationUser : IdentityUser
     {
@@ -40,8 +48,11 @@ namespace WebApplication4.Models
         public DbSet<Syuukasaki> Syuukasakis { get; set; }
         public DbSet<Haisousaki> Haisousakis { get; set; }
 
+        public System.Data.Entity.DbSet<WebApplication4.Models.UserWithRoleInfo> UserWithRoleInfoes { get; set; }
 
+        public System.Data.Entity.DbSet<WebApplication4.Models.RoleModel> RoleModels { get; set; }
 
+        public System.Data.Entity.DbSet<WebApplication4.Models.ApplicationRole> IdentityRoles { get; set; }
     }
 
 

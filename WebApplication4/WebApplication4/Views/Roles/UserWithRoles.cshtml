@@ -1,0 +1,55 @@
+﻿@model IEnumerable<WebApplication4.Models.UserWithRoleInfo>
+
+@{
+    ViewBag.Title = "UserWithRoles";
+}
+
+<h2>UserWithRoles</h2>
+
+
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+
+        <th>
+            @Html.DisplayName("Administrator")
+        </th>
+
+        <th>
+            @Html.DisplayName("User")
+        </th>
+
+    </tr>
+
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+
+            @for (int i = 0; i < item.UserRoles.Count; i++)
+            {
+                <td>
+                    @Html.EditorFor(model => item.UserRoles[i].IsInThisRole)
+                    @Html.HiddenFor(model => item.UserRoles[i].RoleName)
+                </td>
+            }
+            <td>
+                @Html.ActionLink("Edit", "EditRoleAssignment", new { id = item.UserId })
+            </td>
+        </tr>
+    }
+
+    </table>
+
+    <td>
+        @Html.ActionLink("Index", "Index")
+    </td>
+
+
