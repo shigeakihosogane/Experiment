@@ -9,22 +9,20 @@
 
 <table class="table">
     <tr>
-
         <th>
             @Html.DisplayNameFor(model => model.UserName)
         </th>
 
-        <th>
-            @Html.DisplayName("Administrator")
-        </th>
-
-        <th>
-            @Html.DisplayName("User")
-        </th>
-
+        @{int j = 0;
+            foreach (var role in Model)
+            {
+                <th>
+                    @Html.DisplayName(role.UserRoles[j].RoleName)
+                </th>
+                j++;
+            }
+        }
     </tr>
-
-
 
     @foreach (var item in Model)
     {
@@ -46,10 +44,10 @@
         </tr>
     }
 
-    </table>
+</table>
 
-    <td>
-        @Html.ActionLink("Index", "Index")
-    </td>
+<td>
+    @Html.ActionLink("Index", "Index")
+</td>
 
 
